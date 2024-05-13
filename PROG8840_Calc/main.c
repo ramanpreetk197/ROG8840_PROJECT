@@ -4,6 +4,7 @@ void printWelcomeMenu();
 void printOptions();
 void add();
 void subtract();
+void multiply();
 
 
 void main() {
@@ -23,6 +24,8 @@ void main() {
 		add();
 	case 2:
 		subtract();
+	case 3:
+		multiply();
 	}
 
 }
@@ -37,6 +40,7 @@ void printWelcomeMenu() {
 void printOptions() {
 	printf("1. Add\n");
 	printf("2. Subtract\n");
+	printf("3. Multiply\n");
 }
 
 void add() {
@@ -57,3 +61,13 @@ void subtract() {
 
 	int result = num2 - num1;
 }
+
+void multiply() {
+	int num1, num2;
+
+	num1 = 0;
+	num2 = 42;
+
+	int result = num2 - num1;
+}
+
