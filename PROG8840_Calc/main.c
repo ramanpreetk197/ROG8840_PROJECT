@@ -55,5 +55,5 @@ void subtract() {
 	num1 = 0;
 	num2 = 42;
 
-	int result = num2 / num1;
+	int result = num2 - num1;
 }
