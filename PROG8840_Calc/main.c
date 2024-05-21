@@ -7,7 +7,7 @@ void subtract();
 void multiply();
 
 
-void main() {
+int main() {
 
 	printWelcomeMenu();
 
@@ -16,17 +16,23 @@ void main() {
 	int inputNum;
 
 	printf("Enter operation number: ");
-	scanf_s("%1o", &inputNum);
+	scanf_s("%d", &inputNum);
 
 	switch (inputNum)
 	{
 	case 1:
 		add();
+		break;
 	case 2:
 		subtract();
+		break;
 	case 3:
 		multiply();
+		break;
+	default:
+		printf("Please Enter a Valid Value:");
 	}
+	return 0;
 
 }
 
@@ -46,28 +52,54 @@ void printOptions() {
 void add() {
 	double num1, num2, result;
 	printf("Enter the first value:");
-	scanf_s("%lf", &num1);
+	if (scanf_s("%lf", &num1) != 1)
+	{
+		printf("Please enter a valid first value:\n");
+		return;
+	}
 	printf("Enter the second value:");
-	scanf_s("%lf", &num2);
+	if (scanf_s("%lf", &num2) != 1)
+	{
+		printf("Please enter a valid second value:\n");
+		return;
+	}
 	result = num1 + num2;
 	printf("%lf + %lf = %lf\n", num1, num2, result);
 }
 
 void subtract() {
-	int num1, num2;
-
-	num1 = 0;
-	num2 = 42;
-
-	int result = num2 - num1;
+	double num1, num2, result;
+	printf("Enter the first value:");
+	if (scanf_s("%lf", &num1) != 1)
+	{
+		printf("Please enter a valid first value:\n");
+		return;
+	}
+	printf("Enter the second value:");
+	if (scanf_s("%lf", &num2) != 1)
+	{
+		printf("Please enter a valid second value:\n");
+		return;
+	}
+	result = num1 - num2;
+	printf("%lf - %lf = %lf\n", num1, num2, result);
 }
 
 void multiply() {
-	int num1, num2;
-
-	num1 = 0;
-	num2 = 42;
-
-	int result = num2 - num1;
+	double num1, num2, result;
+	printf("Enter the first value:");
+	if (scanf_s("%lf", &num1) != 1)
+	{
+		printf("Please enter a valid first value:\n");
+		return;
+	}
+	printf("Enter the second value:");
+	if (scanf_s("%lf", &num2) != 1)
+	{
+		printf("Please enter a valid second value:\n");
+		return;
+	}
+	result = num1 * num2;
+	printf("%lf * %lf = %lf\n", num1, num2, result);
 }
 
